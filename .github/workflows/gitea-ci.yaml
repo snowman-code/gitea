@@ -1,5 +1,5 @@
 name: Build And Test
-run-name: ${{ gitea.actor }} is runs ci pipeline
+run-name: ${{ github.actor }} is runs ci pipeline
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ on:
       - 'helm/**'
 
 jobs:
-  Gitea-Docker-Build-Push:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -27,4 +27,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: gnu96/gitea-docker-build-push-repo:latest
+          tags: gnu96/github-docker-build-push-repo:latest

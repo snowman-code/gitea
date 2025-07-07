@@ -1,9 +1,9 @@
-name: Gitea Actions Build Demo
-run-name: ${{ gitea.actor }} is testing out Gitea Actions Build 🚀
+name: github Actions Build Demo
+run-name: ${{ github.actor }} is testing out github Actions Build 🚀
 on: [push]
 
 jobs:
-  Explore-Gitea-Actions:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
